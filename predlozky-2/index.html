@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Předložky AT · IN · ON 2 – pokračování</title>
+<meta name="description" content="Pokračování cvičení předložek AT, IN a ON: 40 nových vět a nový úkol oprava chyby. Zdarma, v telefonu i v počítači.">
+<!-- Náhled odkazu (Instagram, Facebook, WhatsApp, Messenger) -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Angličtina s Katkou">
+<meta property="og:title" content="Předložky AT, IN, ON 2 – zvládneš i pokračování?">
+<meta property="og:description" content="40 nových vět a oprava chyb s okamžitou kontrolou. Zdarma, v telefonu.">
+<meta property="og:url" content="https://anglictinaskatkou.github.io/predlozky-2/">
+<meta property="og:image" content="https://anglictinaskatkou.github.io/predlozky-2/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Předložky AT, IN, ON – cvičení Angličtiny s Katkou">
+<meta property="og:locale" content="cs_CZ">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  /* Barvy a písmo podle webu anglictinaskatkou.cz */
+  :root {
+    --bg: #ffebeb;
+    --card: #ffffff;
+    --fg: #111111;
+    --muted: #6f6f6f;
+    --brand: #c42040;
+    --brand-dark: #9e1832;
+    --brand-soft: #ffe3e8;
+    --line: #f2d3d8;
+    --ok: #2e8b57;
+    --ok-bg: #e4f4ea;
+    --bad: #d2641a;
+    --bad-bg: #fdeedd;
+    --radius: 14px;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; color: var(--fg);
+    background: linear-gradient(180deg, var(--bg) 0, #fff 480px) no-repeat, #fff;
+    font: 17px/1.55 "Open Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  main { max-width: 560px; margin: 0 auto; padding: 20px 16px 40px; }
+  h1, h2 { font-weight: 800; color: var(--fg); line-height: 1.2; margin: 0 0 12px; }
+  h1 { font-size: 30px; color: var(--brand); }
+  h2 { font-size: 22px; }
+  p { margin: 0 0 12px; }
+  .muted { color: var(--muted); }
+  .brand { font-size: 19px; font-weight: 700; color: var(--fg); margin-bottom: 18px; }
+  .rule { width: 64px; height: 4px; border-radius: 4px; background: var(--brand); margin: 0 0 18px; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 20px 18px; margin-bottom: 14px; box-shadow: 0 6px 18px rgba(196, 32, 64, .07); }
+  .hidden { display: none !important; }
+
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center;
+    min-height: 50px; padding: 12px 20px; border-radius: 999px; border: 2px solid var(--brand);
+    background: var(--brand); color: #fff; font: inherit; font-weight: 700; cursor: pointer; text-decoration: none;
+  }
+  .btn:hover { background: var(--brand-dark); border-color: var(--brand-dark); }
+  .btn.ghost { background: transparent; color: var(--brand); }
+  .btn.block { width: 100%; }
+  .stack { display: grid; gap: 10px; }
+
+  /* Úvod */
+  .parts { list-style: none; padding: 0; margin: 14px 0 18px; display: grid; gap: 8px; }
+  .parts li { display: flex; gap: 12px; align-items: center; }
+  .parts .num { width: 30px; height: 30px; border-radius: 50%; background: var(--brand); color: #fff; font-weight: 700; display: grid; place-items: center; flex: none; font-size: 15px; }
+
+  /* Otázka */
+  .top { display: flex; justify-content: space-between; align-items: center; gap: 10px; font-size: 14px; color: var(--muted); margin-bottom: 8px; }
+  .chip { background: var(--brand-soft); color: var(--brand-dark); border-radius: 999px; padding: 3px 10px; font-weight: 700; font-size: 13px; }
+  .bar { height: 6px; background: var(--line); border-radius: 99px; overflow: hidden; margin-bottom: 16px; }
+  .bar span { display: block; height: 100%; width: 0; background: var(--brand); transition: width .25s; }
+  .sentence { font-size: 22px; line-height: 1.45; margin: 6px 0 20px; }
+  .gap { display: inline-block; min-width: 64px; border-bottom: 2px solid var(--brand); text-align: center; font-weight: 700; padding: 0 4px; }
+  .gap.ok { color: var(--ok); border-color: var(--ok); }
+  .gap.bad { color: var(--bad); border-color: var(--bad); }
+  .choices { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+  .choices.four { grid-template-columns: repeat(2, 1fr); }
+  .choice {
+    min-height: 56px; border-radius: 12px; border: 2px solid var(--line); background: #fff;
+    font: inherit; font-size: 19px; font-weight: 700; color: var(--fg); cursor: pointer;
+  }
+  .choice small { display: block; font-size: 12px; font-weight: 400; color: var(--muted); }
+  .choice:hover:not(:disabled) { border-color: var(--brand); }
+  .choice:disabled { cursor: default; }
+  .choice.ok { background: var(--ok-bg); border-color: var(--ok); color: var(--ok); }
+  .choice.bad { background: var(--bad-bg); border-color: var(--bad); color: var(--bad); }
+  .feedback { border-radius: 12px; padding: 14px 16px; margin-top: 16px; font-size: 16px; }
+  .feedback.ok { background: var(--ok-bg); }
+  .feedback.bad { background: var(--bad-bg); }
+  .feedback strong { display: block; margin-bottom: 4px; }
+  .feedback .cz { color: var(--muted); font-style: italic; margin: 6px 0 0; }
+  #next { margin-top: 16px; }
+  /* Oprava chyby: předložka, která ve větě je (může být špatně) */
+  .hint { font-size: 15px; color: var(--brand-dark); font-weight: 700; margin: 0 0 4px; }
+  .gap.shown { border-bottom-style: dashed; color: var(--brand-dark); background: var(--brand-soft); border-radius: 6px 6px 0 0; }
+
+  /* Výsledek */
+  .score { font-weight: 800; font-size: 56px; color: var(--brand); line-height: 1; margin: 4px 0 6px; }
+  .rows { display: grid; gap: 10px; margin: 16px 0 6px; }
+  .row-top { display: flex; justify-content: space-between; font-weight: 700; font-size: 15px; margin-bottom: 4px; }
+  .row .bar { margin-bottom: 0; height: 8px; }
+  .advice { margin: 0; padding-left: 20px; }
+  .advice li { margin-bottom: 8px; }
+  details { border-top: 1px solid var(--line); padding: 12px 0 0; margin-top: 4px; }
+  summary { cursor: pointer; font-weight: 700; color: var(--brand); }
+  .review { list-style: none; padding: 0; margin: 12px 0 0; font-size: 15px; }
+  .review li { padding: 8px 0; border-bottom: 1px solid var(--line); }
+  .review .mark { font-weight: 700; margin-right: 6px; }
+  .review .mark.ok { color: var(--ok); }
+  .review .mark.bad { color: var(--bad); }
+  .review b { color: var(--brand-dark); }
+  .cta { background: var(--brand); color: #fff; border: 0; }
+  .cta h2 { color: #fff; }
+  .cta .btn { background: #fff; color: var(--brand-dark); border-color: #fff; }
+  footer { text-align: center; font-size: 12px; color: var(--muted); margin-top: 26px; line-height: 1.6; }
+  footer a { color: var(--muted); }
+</style>
+</head>
+<body>
+<main>
+  <div class="brand">Angličtina s Katkou</div>
+
+  <!-- ÚVOD -->
+  <section id="intro">
+    <h1>Předložky AT · IN · ON 2</h1>
+    <div class="rule"></div>
+    <p>Pokračování cvičení k e-booku <b>Předložky</b>. Všechny věty jsou jiné než v prvním cvičení a přibyl nový úkol: <b>oprava chyby</b>.</p>
+    <div class="card">
+      <p><b>Jak to funguje:</b> u každé věty vyberte správnou předložku. Hned uvidíte, jestli máte pravdu, a proč.</p>
+      <ul class="parts">
+        <li><span class="num">1</span><span><b>Čas</b> – svátky, části dne, století</span></li>
+        <li><span class="num">2</span><span><b>Místo</b> – patra, fronty, kapsy a zastávky</span></li>
+        <li><span class="num">3</span><span><b>Oprav chybu</b> – předložka ve větě může být špatně, nebo i správně</span></li>
+        <li><span class="num">4</span><span><b>Všechno dohromady</b> – ustálená spojení a věty bez předložky</span></li>
+      </ul>
+      <p class="muted">40 vět · asi 12 minut · na konci uvidíte, co procvičit</p>
+      <button class="btn block" id="start" type="button">Začít cvičení</button>
+    </div>
+  </section>
+
+  <!-- OTÁZKA -->
+  <section id="quiz" class="hidden">
+    <div class="top"><span class="chip" id="part-label"></span><span id="counter"></span></div>
+    <div class="bar"><span id="progress"></span></div>
+    <div class="card">
+      <p class="hint hidden" id="hint">Je zvýrazněná předložka správně? Vyberte tu, která do věty patří.</p>
+      <p class="sentence" id="sentence"></p>
+      <div class="choices" id="choices"></div>
+      <div class="feedback hidden" id="feedback"></div>
+      <button class="btn block hidden" id="next" type="button">Další věta</button>
+    </div>
+  </section>
+
+  <!-- VÝSLEDEK -->
+  <section id="result" class="hidden">
+    <h1 id="result-title"></h1>
+    <div class="rule"></div>
+    <div class="card">
+      <div class="score" id="score"></div>
+      <p class="muted" id="score-text"></p>
+      <div class="rows" id="rows"></div>
+    </div>
+    <div class="card" id="advice-card">
+      <h2>Co si zopakovat</h2>
+      <ul class="advice" id="advice"></ul>
+    </div>
+    <div class="stack">
+      <button class="btn block" id="retry-wrong" type="button">Zkusit znovu jen chyby</button>
+      <button class="btn ghost block" id="restart" type="button">Začít celé znovu</button>
+    </div>
+    <div class="card" style="margin-top:14px">
+      <details>
+        <summary>Zobrazit všechny věty s řešením</summary>
+        <ul class="review" id="review"></ul>
+      </details>
+    </div>
+    <div class="card cta">
+      <p style="margin:0 0 14px"><a href="https://anglictinaskatkou.github.io/predlozky/" style="color:#fff">← První cvičení Předložky AT · IN · ON</a></p>
+      <h2>Chcete předložky procvičit naživo?</h2>
+      <p>Na online lekci s Katkou je použijete v rozhovoru, ne jen ve cvičení.</p>
+      <a class="btn block" href="https://anglictinaskatkou.cz/online-kurzy/" target="_blank" rel="noopener">Online kurzy angličtiny</a>
+    </div>
+  </section>
+
+  <footer>
+    © Angličtina s Katkou · <a href="https://anglictinaskatkou.cz/" target="_blank" rel="noopener">anglictinaskatkou.cz</a><br>
+    Materiál je určen majitelům e-booku Předložky. Prosím, nešiřte ho dál bez souhlasu autorky.
+  </footer>
+</main>
+
+<script>
+  // Odkazy na stránky e-booku Předložky podle pravidla
+  const REFS = {
+    'at-time':  'AT – čas (e-book str. 07)',
+    'at-place': 'AT – místo (e-book str. 08)',
+    'in-time':  'IN – čas (e-book str. 12)',
+    'in-place': 'IN – místo (e-book str. 13)',
+    'on-time':  'ON – čas (e-book str. 17)',
+    'on-place': 'ON – místo (e-book str. 18)',
+    'pairs':    'Dvojice, které se pletou (at the moment × in a moment, at the end × in the end, on time × in time…)',
+    'none':     'Bez předložky: next, last, this, every, tomorrow, yesterday'
+  };
+
+  REFS.phrases = 'Ustálená spojení (on holiday, at school, at a party, in pencil…)';
+
+  const PARTS = ['Čas', 'Místo', 'Oprav chybu', 'Všechno dohromady'];
+
+  // s = věta, a = správná odpověď ('-' = bez předložky), w = předložka zobrazená ve větě (jen část Oprav chybu),
+  // cz = překlad, why = vysvětlení, ref = pravidlo
+  const QUESTIONS = [
+    // 1 – ČAS
+    { p: 0, s: 'The meeting starts ___ half past nine.', a: 'at', cz: 'Schůzka začíná v půl desáté.', why: 'Přesný čas na hodinách → AT.', ref: 'at-time' },
+    { p: 0, s: 'I always feel tired ___ the afternoon.', a: 'in', cz: 'Odpoledne jsem vždycky unavený/á.', why: 'Části dne: in the morning, in the afternoon, in the evening → IN.', ref: 'in-time' },
+    { p: 0, s: 'We first met ___ New Year’s Eve.', a: 'on', cz: 'Poprvé jsme se potkali na Silvestra.', why: 'Konkrétní den (… Eve, … Day) → ON.', ref: 'on-time' },
+    { p: 0, s: 'The shop opens ___ noon on Saturdays.', a: 'at', cz: 'Obchod v sobotu otevírá v poledne.', why: 'Noon a midnight jsou přesné body v čase → AT.', ref: 'at-time' },
+    { p: 0, s: 'My grandfather was born ___ the 1950s.', a: 'in', cz: 'Můj dědeček se narodil v padesátých letech.', why: 'Desetiletí a delší období → IN.', ref: 'in-time' },
+    { p: 0, s: 'Her birthday is ___ 3 May.', a: 'on', cz: 'Narozeniny má 3. května.', why: 'Datum → ON.', ref: 'on-time' },
+    { p: 0, s: 'We paint eggs ___ Easter.', a: 'at', cz: 'O Velikonocích malujeme vajíčka.', why: 'Svátky jako celé období → AT (at Easter, at Christmas). Konkrétní den → ON (on Easter Monday).', ref: 'at-time' },
+    { p: 0, s: 'The museum is closed ___ Mondays.', a: 'on', cz: 'Muzeum je v pondělí zavřené.', why: 'Dny v týdnu, i když se opakují (on Mondays = každé pondělí) → ON.', ref: 'on-time' },
+    { p: 0, s: 'People will travel to Mars ___ the 21st century.', a: 'in', cz: 'Ve 21. století budou lidé létat na Mars.', why: 'Století → IN.', ref: 'in-time' },
+    { p: 0, s: 'We watched the boats ___ sunset.', a: 'at', cz: 'Při západu slunce jsme se dívali na lodě.', why: 'Sunrise, sunset, dawn – okamžik dne → AT.', ref: 'at-time' },
+
+    // 2 – MÍSTO
+    { p: 1, s: 'Let’s meet ___ the bus stop.', a: 'at', cz: 'Sejdeme se na zastávce.', why: 'Bod, kde na něco čekáme nebo se potkáváme → AT.', ref: 'at-place' },
+    { p: 1, s: 'I’ve been waiting ___ the queue for an hour.', a: 'in', cz: 'Ve frontě čekám už hodinu.', why: 'Ve frontě, v řadě → IN (in a queue, in line).', ref: 'in-place' },
+    { p: 1, s: 'My keys are ___ my pocket.', a: 'in', cz: 'Klíče mám v kapse.', why: 'Uvnitř něčeho → IN.', ref: 'in-place' },
+    { p: 1, s: 'I found your bag ___ the floor.', a: 'on', cz: 'Tvou tašku jsem našel/našla na podlaze.', why: 'Na povrchu → ON.', ref: 'on-place' },
+    { p: 1, s: 'Our flat is ___ the third floor.', a: 'on', cz: 'Náš byt je ve třetím patře.', why: 'Patro → ON (on the ground floor, on the first floor). Česky „ve“, anglicky ON.', ref: 'on-place' },
+    { p: 1, s: 'Please sign your name ___ the bottom of the page.', a: 'at', cz: 'Podepište se prosím dole na stránce.', why: 'At the top / at the bottom of… → AT.', ref: 'at-place' },
+    { p: 1, s: 'The children are playing ___ the garden.', a: 'in', cz: 'Děti si hrají na zahradě.', why: 'Zahrada, park, ulice jako prostor → IN. Česky „na“, anglicky IN.', ref: 'in-place' },
+    { p: 1, s: 'I’ll wait for you ___ the entrance.', a: 'at', cz: 'Počkám na tebe u vchodu.', why: 'U vchodu, u dveří, u okna – konkrétní bod → AT.', ref: 'at-place' },
+    { p: 1, s: 'Put the plates ___ the table, please.', a: 'on', cz: 'Dej prosím talíře na stůl.', why: 'Na povrch stolu → ON.', ref: 'on-place' },
+    { p: 1, s: 'He’s sitting ___ the back of the bus.', a: 'at', cz: 'Sedí vzadu v autobuse.', why: 'At the back / at the front of… → AT.', ref: 'at-place' },
+
+    // 3 – OPRAV CHYBU (w = předložka, která ve větě je)
+    { p: 2, s: 'I was born ___ 12 June 1990.', w: 'in', a: 'on', cz: 'Narodil/a jsem se 12. června 1990.', why: 'Chyba: celé datum → ON. Samotný rok by byl IN 1990.', ref: 'on-time' },
+    { p: 2, s: 'We arrived ___ London late at night.', w: 'at', a: 'in', cz: 'Do Londýna jsme přijeli pozdě v noci.', why: 'Chyba: arrive in + město nebo země, arrive at + budova nebo letiště.', ref: 'in-place' },
+    { p: 2, s: 'I’m reading a good book ___ my phone.', w: 'on', a: 'on', cz: 'Čtu dobrou knihu v telefonu.', why: 'Tady chyba nebyla: on my phone, on the computer, on the internet → ON.', ref: 'on-place' },
+    { p: 2, s: 'I’ll see you ___ Christmas.', w: 'on', a: 'at', cz: 'Uvidíme se o Vánocích.', why: 'Chyba: Vánoce jako celé období → AT Christmas. ON jen u konkrétního dne: on Christmas Day.', ref: 'at-time' },
+    { p: 2, s: 'The film starts ___ 7 o’clock.', w: 'in', a: 'at', cz: 'Film začíná v 7 hodin.', why: 'Chyba: přesný čas → AT.', ref: 'at-time' },
+    { p: 2, s: 'There’s a lot of snow ___ the mountains.', w: 'in', a: 'in', cz: 'Na horách je hodně sněhu.', why: 'Tady chyba nebyla: in the mountains (v oblasti hor) → IN. Česky „na“, anglicky IN.', ref: 'in-place' },
+    { p: 2, s: 'We’re leaving ___ this Saturday.', w: 'on', a: '-', cz: 'Odjíždíme tuto sobotu.', why: 'Chyba: před this, next, last a every se předložka nepíše.', ref: 'none' },
+    { p: 2, s: 'My office is ___ the second floor.', w: 'in', a: 'on', cz: 'Moje kancelář je ve druhém patře.', why: 'Chyba: patro → ON.', ref: 'on-place' },
+    { p: 2, s: 'She arrived ___ the airport two hours early.', w: 'at', a: 'at', cz: 'Na letiště přijela o dvě hodiny dřív.', why: 'Tady chyba nebyla: arrive at + budova, letiště, nádraží → AT.', ref: 'at-place' },
+    { p: 2, s: 'I saw him ___ the bus this morning.', w: 'in', a: 'on', cz: 'Ráno jsem ho viděl/a v autobuse.', why: 'Chyba: autobus, vlak, letadlo → ON. Auto a taxi → IN.', ref: 'pairs' },
+
+    // 4 – VŠECHNO DOHROMADY
+    { p: 3, s: 'I’ll be home ___ tomorrow evening.', a: '-', cz: 'Zítra večer budu doma.', why: 'Před tomorrow a yesterday se předložka nepíše.', ref: 'none' },
+    { p: 3, s: 'We have a test ___ the beginning of next week.', a: 'at', cz: 'Na začátku příštího týdne máme test.', why: 'At the beginning of / at the end of → AT.', ref: 'at-time' },
+    { p: 3, s: 'I usually read ___ the train to work.', a: 'on', cz: 'Ve vlaku do práce obvykle čtu.', why: 'Vlak, autobus, letadlo → ON.', ref: 'pairs' },
+    { p: 3, s: 'I saw her ___ a party last night.', a: 'at', cz: 'Včera večer jsem ji viděl/a na večírku.', why: 'Akce a události: at a party, at a wedding, at a concert → AT.', ref: 'phrases' },
+    { p: 3, s: 'She’s ___ holiday in Italy this week.', a: 'on', cz: 'Tento týden je na dovolené v Itálii.', why: 'Ustálené spojení: on holiday, on business, on a trip → ON.', ref: 'phrases' },
+    { p: 3, s: 'We’ll finish the project ___ two weeks’ time.', a: 'in', cz: 'Projekt dokončíme za dva týdny.', why: '„Za“ nějakou dobu od teď → IN (in two weeks’ time).', ref: 'in-time' },
+    { p: 3, s: 'He’s always ___ time for work, never late.', a: 'on', cz: 'Do práce chodí vždycky přesně, nikdy ne pozdě.', why: 'On time = přesně podle plánu. In time = včas, stihnout to.', ref: 'pairs' },
+    { p: 3, s: 'Are you free ___ this afternoon?', a: '-', cz: 'Máš dnes odpoledne čas?', why: 'Před this se předložka nepíše (this afternoon, this week).', ref: 'none' },
+    { p: 3, s: 'My son is ___ school until four.', a: 'at', cz: 'Syn je ve škole do čtyř.', why: 'Ustálená spojení: at school, at work, at home → AT.', ref: 'phrases' },
+    { p: 3, s: 'Please write your answers ___ pencil.', a: 'in', cz: 'Pište prosím odpovědi tužkou.', why: 'Čím nebo jak píšeme: in pencil, in ink, in English → IN.', ref: 'phrases' }
+  ];
+
+  const LABEL = { at: 'AT', in: 'IN', on: 'ON', '-': '—' };
+  const $ = id => document.getElementById(id);
+
+  let order = [];      // indexy otázek v aktuálním kole
+  let pos = 0;         // pozice v kole
+  let answers = {};    // index -> zvolená odpověď (poslední pokus)
+
+  function show(id) {
+    ['intro', 'quiz', 'result'].forEach(s => $(s).classList.toggle('hidden', s !== id));
+    window.scrollTo(0, 0);
+  }
+
+  function startRound(indexes) {
+    order = indexes;
+    pos = 0;
+    show('quiz');
+    renderQuestion();
+  }
+
+  function sentenceHtml(q, value, cls) {
+    const gap = `<span class="gap ${cls || ''}">${value ? LABEL[value] : '&nbsp;'}</span>`;
+    const parts = q.s.split('___');
+    return parts[0] + gap + parts[1];
+  }
+
+  function renderQuestion() {
+    const i = order[pos];
+    const q = QUESTIONS[i];
+    $('part-label').textContent = `${q.p + 1}. ${PARTS[q.p]}`;
+    $('counter').textContent = `${pos + 1} / ${order.length}`;
+    $('progress').style.width = `${(pos / order.length) * 100}%`;
+    // Oprav chybu: ve větě je předložka, která může být špatně
+    $('hint').classList.toggle('hidden', !q.w);
+    $('sentence').innerHTML = q.w ? sentenceHtml(q, q.w, 'shown') : sentenceHtml(q);
+    $('feedback').className = 'feedback hidden';
+    $('next').classList.add('hidden');
+
+    const opts = q.p >= 2 ? ['at', 'in', 'on', '-'] : ['at', 'in', 'on'];
+    const box = $('choices');
+    box.className = 'choices' + (opts.length === 4 ? ' four' : '');
+    box.innerHTML = '';
+    opts.forEach(o => {
+      const b = document.createElement('button');
+      b.type = 'button';
+      b.className = 'choice';
+      b.dataset.value = o;
+      b.innerHTML = o === '-' ? '—<small>bez předložky</small>' : LABEL[o];
+      b.addEventListener('click', () => answer(o));
+      box.appendChild(b);
+    });
+  }
+
+  function answer(value) {
+    const i = order[pos];
+    const q = QUESTIONS[i];
+    const ok = value === q.a;
+    answers[i] = value;
+
+    document.querySelectorAll('.choice').forEach(b => {
+      b.disabled = true;
+      if (b.dataset.value === q.a) b.classList.add('ok');
+      else if (b.dataset.value === value) b.classList.add('bad');
+    });
+    $('sentence').innerHTML = sentenceHtml(q, q.a, ok ? 'ok' : 'bad');
+
+    const fb = $('feedback');
+    fb.className = 'feedback ' + (ok ? 'ok' : 'bad');
+    const head = ok
+      ? (q.w && q.w === q.a ? 'Správně, tady chyba nebyla!' : 'Správně!')
+      : 'Správně je ' + LABEL[q.a] + (q.a === '-' ? ' (bez předložky)' : '') + '.';
+    fb.innerHTML = `<strong>${head}</strong>${q.why}<p class="cz">${q.cz}</p>`;
+
+    const next = $('next');
+    next.textContent = pos + 1 < order.length ? 'Další věta' : 'Zobrazit výsledek';
+    next.classList.remove('hidden');
+    next.focus();
+  }
+
+  function next() {
+    pos++;
+    if (pos < order.length) renderQuestion();
+    else renderResult();
+  }
+
+  function renderResult() {
+    const all = QUESTIONS.map((q, i) => ({ q, i, ok: answers[i] === q.a }));
+    const correct = all.filter(x => x.ok).length;
+    const pct = Math.round((correct / all.length) * 100);
+
+    $('result-title').textContent = pct >= 90 ? 'Výborně!' : pct >= 70 ? 'Dobrá práce!' : 'Je co zlepšovat';
+    $('score').textContent = `${correct} / ${all.length}`;
+    $('score-text').textContent = pct >= 90
+      ? 'Předložky AT, IN a ON máte opravdu zvládnuté.'
+      : pct >= 70
+        ? 'Základ máte. Projděte si chyby a zkuste je ještě jednou.'
+        : 'Nevadí, předložky jsou záludné. Zopakujte si pravidla níže a zkuste to znovu.';
+
+    $('rows').innerHTML = PARTS.map((name, p) => {
+      const items = all.filter(x => x.q.p === p);
+      const ok = items.filter(x => x.ok).length;
+      return `<div class="row"><div class="row-top"><span>${p + 1}. ${name}</span><span>${ok} / ${items.length}</span></div>
+        <div class="bar"><span style="width:${(ok / items.length) * 100}%"></span></div></div>`;
+    }).join('');
+
+    // Doporučení podle pravidel, ve kterých byly chyby
+    const wrong = all.filter(x => !x.ok);
+    const byRef = {};
+    wrong.forEach(x => { byRef[x.q.ref] = (byRef[x.q.ref] || 0) + 1; });
+    const refs = Object.keys(byRef).sort((a, b) => byRef[b] - byRef[a]);
+    $('advice-card').classList.toggle('hidden', refs.length === 0);
+    $('advice').innerHTML = refs.map(r => `<li>${REFS[r]} – ${byRef[r]}× chyba</li>`).join('');
+
+    $('retry-wrong').classList.toggle('hidden', wrong.length === 0);
+
+    $('review').innerHTML = all.map(x => {
+      const filled = x.q.a === '-'
+        ? x.q.s.replace('___ ', '') + ' <b>(bez předložky)</b>'
+        : x.q.s.replace('___', `<b>${x.q.a}</b>`)
+            .replace(/^<b>(\w+)<\/b>/, (m, w) => `<b>${w.charAt(0).toUpperCase() + w.slice(1)}</b>`);
+      return `<li><span class="mark ${x.ok ? 'ok' : 'bad'}">${x.ok ? '✓' : '✗'}</span>${filled}<br><span class="muted">${x.q.cz}</span></li>`;
+    }).join('');
+
+    $('progress').style.width = '100%';
+    show('result');
+  }
+
+  $('start').addEventListener('click', () => { answers = {}; startRound(QUESTIONS.map((_, i) => i)); });
+  $('next').addEventListener('click', next);
+  $('restart').addEventListener('click', () => { answers = {}; startRound(QUESTIONS.map((_, i) => i)); });
+  $('retry-wrong').addEventListener('click', () => {
+    startRound(QUESTIONS.map((q, i) => i).filter(i => answers[i] !== QUESTIONS[i].a));
+  });
+</script>
+</body>
+</html>
