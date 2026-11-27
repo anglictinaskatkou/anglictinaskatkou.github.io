@@ -50,6 +50,10 @@
   p { margin: 0 0 12px; }
   .muted { color: var(--muted); }
   .small { font-size: 14px; }
+  /* Úvod testu: očíslované kroky jako ve cvičení Předložky */
+  .ti-steps { list-style: none; counter-reset: ti; padding: 0; margin: 12px 0; display: grid; gap: 10px; }
+  .ti-steps li { counter-increment: ti; display: flex; align-items: center; gap: 12px; }
+  .ti-steps li::before { content: counter(ti); flex: none; width: 30px; height: 30px; border-radius: 50%; background: var(--brand); color: #fff; font-weight: 800; font-size: 14px; display: grid; place-items: center; }
   .brand { font-size: 19px; font-weight: 700; margin-bottom: 18px; }
   .rule { width: 64px; height: 4px; border-radius: 4px; background: var(--brand); margin: 0 0 16px; }
   .card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 20px 18px; margin-bottom: 14px; box-shadow: 0 6px 18px rgba(196, 32, 64, .07); }
@@ -287,6 +291,17 @@
     <div class="top"><button class="back" type="button" data-home>← Zpět</button></div>
     <div class="card">
       <h2 id="length-title"></h2>
+      <!-- Úvod testu (jen v režimu Test) -->
+      <div id="test-intro" class="hidden">
+        <p><b>Čeho se týká:</b> <span id="ti-about"></span></p>
+        <p><b>Jak to funguje:</b> ke každému pojmu vyberte ze čtyř možností správnou odpověď. Hned uvidíte, jestli máte pravdu.</p>
+        <ol class="ti-steps">
+          <li><b>Pojem</b> – <span id="ti-dir"></span></li>
+          <li><b>Čtyři možnosti</b> – vyberete jednu</li>
+          <li><b>Výsledek</b> – na konci uvidíte, co si zopakovat</li>
+        </ol>
+        <p class="muted small" id="ti-facts"></p>
+      </div>
       <p class="muted">Kolik otázek chcete?</p>
       <div class="stack" id="length-options"></div>
     </div>
@@ -528,6 +543,13 @@
   /* ---------- Délka kola ---------- */
   function chooseLength(mode) {
     $('length-title').textContent = mode === 'test' ? 'Test' : 'Psaní';
+    $('test-intro').classList.toggle('hidden', mode !== 'test');
+    if (mode === 'test') {
+      $('length-title').textContent = 'Test: ' + SET.title;
+      $('ti-about').textContent = SET.subtitle || SET.title;
+      $('ti-dir').textContent = dir === 'cz-en' ? 'zobrazí se česky, odpovídáte anglicky' : 'zobrazí se anglicky, odpovídáte česky';
+      $('ti-facts').textContent = `${ITEMS.length} pojmů v sadě · 10 otázek zaberou asi 3 minuty · směr změníte na úvodu sady`;
+    }
     const sizes = [10, 20].filter(n => n < ITEMS.length).concat([ITEMS.length]);
     $('length-options').innerHTML = sizes.map((n, k) =>
       `<button class="btn ${k ? 'ghost' : ''} block" type="button" data-n="${n}">${n === ITEMS.length ? 'Všechny (' + n + ')' : n + ' otázek'}</button>`).join('');
