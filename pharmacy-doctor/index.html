@@ -884,6 +884,17 @@
   if (canSpeak) speechSynthesis.getVoices();
 
   renderHome();
+
+  /* Přímý odkaz na režim: …/airport/#test, #psani, #spojovani, #karticky
+     (studentovi se otevře rovnou daný režim, tlačítkem Zpět se dostane na úvod sady) */
+  const ROUTES = {
+    test: () => chooseLength('test'),
+    psani: () => chooseLength('write'),
+    spojovani: () => startMatch(),
+    karticky: () => startCards()
+  };
+  const route = ROUTES[decodeURIComponent(location.hash.slice(1)).toLowerCase()];
+  if (route) route();
 </script>
 </body>
 </html>
