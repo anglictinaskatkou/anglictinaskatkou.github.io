@@ -263,8 +263,10 @@
   /* Náhled nového webu: když test otevře prototyp (adresa končí ?nahled=1 až 4),
      vedou rezervace a kurzy zpět do téže verze prototypu místo na současný web. */
   const NAHLED = new URLSearchParams(location.search).get('nahled');
-  if (['1', '2', '3', '4', '4b'].includes(NAHLED)) {
-    const PROTO = 'https://jakubsmolek.github.io/anglictina-prototyp-' + NAHLED + '/';
+  if (['1', '2', '3', '4', '4b', 'web'].includes(NAHLED)) {
+    const PROTO = NAHLED === 'web'
+      ? 'https://jakubsmolek.github.io/anglictina-web/'
+      : 'https://jakubsmolek.github.io/anglictina-prototyp-' + NAHLED + '/';
     CONFIG.bookingUrl = PROTO + '#/rezervace';
     Object.values(CONFIG.packages).forEach(p => { p.url = PROTO + '#/kurzy'; });
   }
